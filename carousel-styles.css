@@ -21,7 +21,7 @@
 
 .slider-contain {
 	/* will-change: transform; */
-    animation: scroll 30s linear infinite;
+    animation: scroll 45s linear infinite;
     display: flex;
     width: calc(250px * 24);
     /* width: 100dvw; */
