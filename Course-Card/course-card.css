@@ -1,0 +1,163 @@
+
+.course-container {
+    margin: 10px 0;
+    display: flex;
+    width: 100vw;
+    flex-wrap: wrap;
+    background-color: #671bbd;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    flex-direction: column;
+    position: relative;
+}
+
+.course-card-insider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    /* height: 100%; */
+    flex-flow: wrap;
+}
+
+.course-card-title {
+    /* position: absolute; */
+    font-size: 2.3rem;
+    font-family: 'Montserrat';
+    color: white;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+.course-card {
+    position: relative;
+    aspect-ratio: 8/5;
+    /* height: 250px; */
+    width: 85%;
+    max-width: 400px;
+    margin: 20px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    overflow: hidden;
+}
+
+.course-card h2 {
+    font-family:'Montserrat';
+    font-weight: 500;
+    font-size: 1.3rem;
+    position: relative;
+    left: 20px;
+    top: 15px;
+    margin-bottom: 20px;
+}
+
+.course-card .circle {
+    position: absolute;
+    height: 300px;
+    aspect-ratio: 1/1;
+    right: -35%;
+    top: -10%;
+    border-radius: 50%;
+    box-shadow: #32325d8d 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.974) 0px 18px 36px -18px inset;
+    
+    background-color: #f6fc80b9;
+    background-image: url('svg/Professor-pana.svg');
+    background-position: -65px 44px;
+    scale: 1.15;
+}
+
+#c0 {
+    background-image: url('svg/Mathematics-board.svg');
+    background-position: -120px -10px;
+}
+
+#c2 {
+    background-image: url('svg/Science-bro.svg');
+    background-size: 125%;
+    background-position: -80px -50px;
+}
+
+#c3 {
+    background-image: url('svg/Science-cuate.svg');
+    background-color:#7f1bbd78;
+    background-position: -60px 14px;
+}
+
+#c4 {
+    background-image: url('svg/Mathematics-bro.svg');
+    background-color: transparent;
+    background-position: -60px 14px;
+}
+
+.course-card .lst {
+    display: flex;
+    width: 60%;
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+    margin: 8px 18px;
+    p {
+        font-family: 'Montserrat';
+        font-size: 14px;
+        font-weight: 400;
+        margin: 0 0;
+    }
+}
+
+.course-card .lst .tick {
+    height: 18px;
+    margin: 6px;
+}
+
+/* Responsive */
+@media screen and (min-width: 380px) and ( max-width: 450px) {
+    .course-card .lst {
+        margin: 1.5vw 18px;
+    }
+
+    .course-card .circle {
+        /* right: -55%; */
+        left: 60%;
+        top: -20%;
+    }
+    #c1 {
+        background-position: -90px 45px;
+    }
+}
+
+@media screen and (max-width: 380px) {    
+    .course-card h2 {
+        margin-bottom: 14px;
+    }
+    .course-card .lst p {
+        font-size: 13px;
+    }
+    .course-card .lst {
+        width: 70%;
+        margin: 0 18px;
+    }
+    .course-card .circle {
+        left: 70%;
+        top: -30%;
+    }
+    #c0 {
+        background-position: -150px -40px;
+    }
+    #c1 {
+        background-position: -100px 65px;
+    }
+    #c2 {
+        background-position: -125px -50px;
+    }
+    #c3 {
+        background-position: -60px 14px;
+    }
+    #c4 {
+        background-position: -90px 14px;
+    }
+
+}
+

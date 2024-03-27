@@ -1,0 +1,325 @@
+/* Course Content Starts  */
+.courses {
+    display: flex;
+    overflow: hidden;
+    margin-bottom: 60px;
+}
+
+.course-title {
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 2.2rem;   /*need variable text size */
+    color: white;
+    /* margin: 15px 0 0 0px; */
+    margin: 15px;
+    text-align: center;
+}
+
+.course-content {
+    background-color: #691bc1;
+}
+
+.courses-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: fit-content;
+    width: 100vw;
+    background-color: #691bc1;
+    flex-direction: row;
+    /* padding: 50px 20px; */
+}
+
+.course-content .course-flex {
+    aspect-ratio: 8/5;
+    position: relative;
+    background-color: white;
+    width: 300px;
+    overflow: hidden;
+    margin: 20px 20px 40px 20px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 7px 8px;
+    transition: all ease;
+}
+
+.course-flex a {
+    position: absolute;
+    font-size: 1.1rem;
+    color: #691bc1;
+    top: 50%; right: 40%;
+    font-family: 'Montserrat';
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.6s;
+}
+
+
+.course-flex:hover {
+    transition: 0.6s;
+    /* scale: 1.09; */
+
+}
+
+.course-flex:hover .blob {
+    scale: 6;
+    transition: 1s cubic-bezier(0.5, 0.34, 0.994, 0.12);
+    transition: 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.course-flex:hover .teacher-name {
+    opacity: 1;
+    transition: 0.6s;
+}
+
+.course-flex .togglePopupBtn {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.6s;
+    top: 75%;
+    right: 40%;
+    font-family: 'Montserrat';
+    font-size: .95rem;
+    color: white;
+    padding: 4px;
+    border-radius: 12px;
+    background-color: #9432f3;
+}
+
+.course-flex:hover .togglePopupBtn {
+    visibility: visible;
+    opacity: 1;
+    z-index: 50;
+}
+
+.course-flex .blob {
+    position: absolute;
+    background-color: lightblue;
+    width: 140px;
+    height: 140px;
+    opacity: .8;
+    border-radius: 50%;
+    z-index: 0;
+    right: -10px;
+    bottom: -30px;
+    transition: all 1s;
+    /* right: -190px; 
+    bottom: -80px; */
+}
+
+.course-flex h1 {
+    font-family: "Montserrat";
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 15px;
+    z-index: 11;
+    position: absolute;
+}
+
+.course-flex .teacher-name {
+    position: absolute;
+    font-size: 1.7rem;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    opacity: 0;
+    z-index: 1;
+    transition: all 1s;
+    padding: 45px;
+}
+
+
+.course-flex h2 {
+    margin: 4px;
+    font-family: "Montserrat";
+    font-size: 0.81rem;
+    /* position: fixed; */
+    z-index: 2;
+    transition: all 0.4s;
+}
+.course-flex:hover h2 {
+    opacity: 0;
+}
+
+.course-flex img {
+    position: absolute;
+    bottom: 0;
+    width: 120px;
+    right: -3px;
+    transition: all 0.6s;
+    pointer-events: none;
+}
+
+.course-flex #deepnarayansir {
+    right: 0px;
+    bottom: -20px;
+    scale: 1.09;
+}
+.course-flex:hover #deepnarayansir {
+    right: -10px;
+    bottom: -40px;
+    transition: 0.6s;
+}
+.course-flex #ramsir {
+    opacity: .925;
+    scale: 1.4;
+    bottom: 5px;
+    right: 3px;
+}
+.course-flex:hover #ramsir {
+    right: -10px;
+    bottom: -18px;
+    transition: 0.6s;
+}
+.course-flex #arunsir {
+    opacity: .9;
+    right: 2px;
+    rotate: -8deg;
+    bottom: -60px;
+}
+.course-flex:hover #arunsir {
+    right: -10px;
+    bottom: -75px;
+    transition: 0.6s;
+}
+.course-flex #abhineetsir {
+    opacity: .9;
+    right: -2px;
+    bottom: -120px;
+}
+.course-flex:hover #abhineetsir {
+    right: -10px;
+    bottom: -145px;
+    transition: 0.6s;
+}
+.course-flex #rajeshwarisir {
+    /* opacity: .9; */
+    right: -2px;
+    bottom: -10px;
+}
+.course-flex:hover #rajeshwarisir {
+    right: -12px;
+    bottom: -30px;
+    transition: 0.6s;
+}
+
+.course-info {
+    /* margin: 45px 0px 10px 40px; */
+    margin: 50px 0 0 20px;
+    height: fit-content;
+    width: fit-content;
+    list-style-type: disc;
+    position: relative;
+    z-index: 20;
+}
+
+/* Course Content Ends  */
+
+
+/* Popup Section Starts  */
+.popupCard {
+    display: none;
+    position:fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 75vw;
+    max-width: 400px;
+    height: 40vh;
+    /* max-height: 290px; */
+    height: fit-content;
+    padding: 40px;
+    box-shadow: 0 5px 30px #5c17aa;
+    border-radius: 12px;
+    background: #fff;
+    z-index: 1002;
+    overflow: hidden;    
+}
+.popupCard h1 {
+    position:relative;
+    font-family: 'Montserrat';
+    font-weight: 600;
+}
+
+.popupCard p {
+    font-family: 'Montserrat';
+    font-size: .95rem;
+    color:#691bc1;
+}
+
+
+.closePopupBtn {
+    font-family: 'Montserrat';
+    font-weight: 600;
+    position: absolute;
+    text-align: center;
+    right: 25px;
+    top: 20px;
+    height: 25px;
+    width: 25px;
+    color: rgba(0,0,0,0.6);;
+    border-radius: 50%;
+    background-color: rgba(0,0,0,0.1);
+    z-index: 1003;
+    transition: all 0.5s;
+    scale: 1.1;
+    cursor: pointer;
+}
+
+.closePopupBtn p{
+    color: rgba(0,0,0,0.6);
+}
+
+.closePopupBtn:hover {
+    scale: 1.2;
+    background-color: rgba(0,0,0,0.18);
+    /* transform: rotateY(180deg); */
+}
+
+/* .popupCard .closePopupBtn {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    font-family: 'Montserrat';
+    text-align: center;
+    border-radius: 50%;
+    background-color: rgba(0,0,0,0.15);;
+    font-weight: 600;
+    right: 16px;
+    top: 17px;
+    transition: all 0.3s;
+}
+
+.closePopupBtn p {
+    color: rgba(0,0,0,0.7);
+}
+
+.popupCard .closePopupBtn:hover {
+    scale: 1.1;    
+    background-color: rgba(0,0,0,0.18);;
+} */
+
+.course-flex.open .popupCard {
+    display: block;
+  }
+  
+.popupCard.close {
+    display: hidden;
+    transition: all 0.6s ease-in-out;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    pointer-events: none;
+    display: none;
+    z-index: 1;
+  }
+
+/* Popup Section Ends  */
+
