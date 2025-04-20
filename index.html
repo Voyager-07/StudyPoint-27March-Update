@@ -431,28 +431,28 @@
                 </div>
                 
                 <div class="course-flex">   
-                    <h1>Biology Faculty</h1>
-                    <div class="teacher-name">Dr. Deep Narayan Sir</div>
+                    <h1>Foundation Faculty</h1>
+                    <div class="teacher-name">Chandramani Sir</div>
                         <button class="togglePopupBtn">Explore</button>
                     <div class="course-info">
-                        <h2>Life Science Pioneer</h2>
-                        <h2>Bioinformatics Specialist</h2>
+                        <h2>Foundation Specialist</h2>
+                        <h2>Cross-Disciplinary</h2>
                         <h2>Research Pioneer</h2>
-                        <h2>Evolutionary Thinker</h2>
+                        <h2>Problem Solver</h2>
                     </div>
                     
                     <div class="blob"></div>
                         <div class="popupCard">
                             <button class="closePopupBtn">X</button>
                             <h1>Class XI-XII</h1>
-                            <p>Elevate your Class XI-XII education with Deep Narayan Srivastava Sir, exclusively for PCMB & Computer. Our approach includes weekly tests, ensuring continuous growth. We prioritize timely syllabus completion for ample revision time. Experience hands-on learning that goes beyond the classroom, setting the path for a successful academic future.</p>
+                            <p>Elevate your Class XI-XII education with Chandramani Sir, exclusively for PCMB. Our approach includes weekly tests, ensuring continuous growth. We prioritize timely syllabus completion for ample revision time. Experience hands-on learning that goes beyond the classroom, setting the path for a successful academic future.</p>
                       </div>
-                      <img src="images/Faculties/DeepNarayanSir.png"  id="deepnarayansir" alt="">
+                      <img src="images/Faculties/ChandramaniSir.png"  id="chandramanisir" alt="">
                 </div>
 
                 <div class="course-flex">
-                    <h1>Foundation Faculty</h1>
-                    <div class="teacher-name">Ram Sir</div>
+                    <h1>Chemistry Faculty</h1>
+                    <div class="teacher-name">Prateek Sir</div>
                     <button class="togglePopupBtn">Explore</button>
                     <div class="course-info">
                         <h2>Fundamental Educator</h2>
@@ -464,19 +464,19 @@
                     <div class="blob"></div>
                     <div class="popupCard">
                         <button class="closePopupBtn">X</button>
-                        <h1>Ram Sir</h1>
-                        <p>Unlock interactive learning and academic success with our Class IX-X courses guided by Ram Sir. Encompassing all subjects, we prioritize comprehensive understanding, supplemented by mock tests to track progress. Our commitment to timely syllabus coverage ensures ample exam preparation. Join us to thrive in an engaging educational journey.</p>
+                        <h1>Prateek Sir</h1>
+                        <p>Unlock interactive learning and academic success with our Class IX-X courses guided by Prateek Sir. Encompassing all subjects, we prioritize comprehensive understanding, supplemented by mock tests to track progress. Our commitment to timely syllabus coverage ensures ample exam preparation. Join us to thrive in an engaging educational journey.</p>
                       </div>
-                    <img src="images/Courses/ram-sir-removebg-preview.png" id="ramsir" alt="">
+                    <img src="images/Faculties/PrateekSir.png" id="prateeksir" alt="">
                 </div>
 
                 <div class="course-flex">
-                    <h1>Mathematics Faculty</h1>
-                    <div class="teacher-name">Rajeshwari Prasad Sir</div>
+                    <h1>Physics Faculty</h1>
+                    <div class="teacher-name">Saif Sir</div>
                     <button class="togglePopupBtn">Explore</button>
                     <div class="course-info">
                         <h2>Quantitative Mind</h2>
-                        <h2>Mathematical Wizard</h2>
+                        <h2>Physics Wizard</h2>
                         <h2>Problem Solver</h2>
                         <h2>Analytical Genius</h2>
                     </div>
@@ -484,10 +484,10 @@
                     <div class="blob"></div>
                     <div class="popupCard">
                         <button class="closePopupBtn">X</button>
-                        <h1>Rajeshwari Sir </h1>
-                        <p>Unlock interactive learning and academic success with ourcourses guided by Rajeshwari Sir. Encompassing all subjects, we prioritize comprehensive understanding, supplemented by mock tests to track progress. Our commitment to timely syllabus coverage ensures ample exam preparation. Join us to thrive in an engaging educational journey.</p>
+                        <h1>Saif Sir </h1>
+                        <p>Unlock interactive learning and academic success with ourcourses guided by Saif Sir. Encompassing all subjects, we prioritize comprehensive understanding, supplemented by mock tests to track progress. Our commitment to timely syllabus coverage ensures ample exam preparation. Join us to thrive in an engaging educational journey.</p>
                       </div>
-                    <img src="images/Faculties/RajeshwariSir.png" id="rajeshwarisir" alt="">
+                    <img src="images/Faculties/SaifSir.png" id="saifsir" alt="">
                 </div>
 
                 
@@ -725,74 +725,6 @@ document.addEventListener("DOMContentLoaded", function() {
     </section>
     
 
-
-
-
-
-
-
-    <script>
-        const toggleBtn = document.querySelector('.toggle_btn')
-        const toggleBtnIcon = document.querySelector('.toggle_btn i')
-        const dropdownMenu = document.querySelector('.dropdown-menu')
-
-        toggleBtn.onclick = function() {
-            dropdownMenu.classList.toggle('clicked')
-            const isOpen = dropdownMenu.classList.contains('clicked')
-
-            toggleBtnIcon.classList = isOpen
-            ? 'fa-solid fa-xmark' 
-            :  'fa-solid fa-bars'
-    
-        }
-
-    </script>
-
-    <script>
-        function SendMail() {
-            var params = {
-                from_name : document.getElementById("full_name").value,
-                class : document.getElementById("class").value,
-                school : document.getElementById("school").value,
-                phone_no : document.getElementById("phone_no").value,
-            }
-            emailjs.send("studypoint.brh.2022", "template_c9pvl8y",params).then(function (res) {
-                alert("Demo Classes Request Sent Successfully!" + res.status);
-            })
-        }
-    </script>
-    <script>
-        function register() {
-        // Get all the input fields
-        var inputFields = document.querySelectorAll('input');
-
-        // Flag to track if all fields are filled
-        var allFieldsFilled = true;
-            // Check each input field
-        for (var i = 0; i < inputFields.length; i++) {
-            if (inputFields[i].value === '') {
-            allFieldsFilled = false;
-            break; // Exit the loop if any field is empty
-            }
-        }
-
-        // Perform action if all fields are filled
-        if (allFieldsFilled) {
-            // Call your desired function or perform your desired action here
-            // For example, you can display a success message or submit a form
-            // replace the following line with your desired action
-            SendMail();
-        } else {
-            // Display an error message or perform any other desired action
-            alert('Please fill in all the fields!');
-        }
-        }
-
-        function submitPoll(id){
-        document.getElementById("register_button").disabled = true;
-        setTimeout(function(){document.getElementById("register_button").disabled = false;},5000);
-        }
-    </script>
-
 </body>
+
 </html>
